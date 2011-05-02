@@ -4,7 +4,9 @@ title: Categories
 modules: [search, categories, recent]
 ---
 
-<h1>{{ page.title }}</h1>
+<header>
+  <h1>{{ page.title }}</h1>
+</header>
 <div class="category">
   <h2 id="CSS3" data-count="{{ site.categories.CSS3 | size }}">CSS3</h2>
   <ol>{% for post in site.categories.CSS3 %}

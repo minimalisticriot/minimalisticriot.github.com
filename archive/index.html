@@ -4,7 +4,9 @@ title: Archive
 modules: [search, categories, recent]
 ---
 
-<h1>{{ page.title }}</h1>
+<header>
+  <h1>{{ page.title }}</h1>
+</header>
 <ol class="archive">{% for post in site.posts %}{% capture y %}{{ post.date | date:"%Y" }}{% endcapture %}{% if forloop.first %}{% assign year = y %}
   <li><span>{{ year }}</span>
   <ol>{% elsif y != year %}{% assign year = y %}
