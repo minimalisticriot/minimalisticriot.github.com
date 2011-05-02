@@ -22,12 +22,7 @@
       </ul>
     </nav>
   </header>
-  <article>
     {{ content }}
-  </article>
-  <aside>{% for m in page.modules %}{% capture module %}{{ m }}.html{% endcapture %}
-    {% include {{ module }} %}{% endfor %}
-  </aside>
   <footer>
     <nav>
       <p>Powered by <a href="http://jekyllrb.com">Jekyll</a> ·

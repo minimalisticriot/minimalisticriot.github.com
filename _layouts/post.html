@@ -1,5 +1,12 @@
 ---
 layout: default
-modules: [search, categories, recent]
 ---
-{{ content }}
+
+<article>
+  {{ content }}
+</article>
+<aside>
+  {% include 'search.html' %}
+  {% include 'categories.html' %}
+  {% include 'recent.html' %}
+</aside>

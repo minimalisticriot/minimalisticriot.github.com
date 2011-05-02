@@ -1,9 +1,15 @@
 ---
 layout: default
 title: About
-modules: [search, categories, recent]
 ---
 
-<header>
-  <h1>{{ page.title }}</h1>
-</header>
+<article>
+  <header>
+    <h1>{{ page.title }}</h1>
+  </header>
+</article>
+<aside>
+  {% include 'search.html' %}
+  {% include 'categories.html' %}
+  {% include 'recent.html' %}
+</aside>

@@ -1,20 +1,26 @@
 ---
 layout: default
 title: Archive
-modules: [search, categories, recent]
 ---
 
-<header>
-  <h1>{{ page.title }}</h1>
-</header>
-<ol class="archive">{% for post in site.posts %}{% capture y %}{{ post.date | date:"%Y" }}{% endcapture %}{% if forloop.first %}{% assign year = y %}
-  <li><span>{{ year }}</span>
-  <ol>{% elsif y != year %}{% assign year = y %}
+<article>
+  <header>
+    <h1>{{ page.title }}</h1>
+  </header>
+  <ol class="archive">{% for post in site.posts %}{% capture y %}{{ post.date | date:"%Y" }}{% endcapture %}{% if forloop.first %}{% assign year = y %}
+    <li><span>{{ year }}</span>
+    <ol>{% elsif y != year %}{% assign year = y %}
+    </ol>
+    </li>
+    <li><span>{{ year }}</span>
+    <ol>{% endif %}
+      <li><time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%b %d" }}</time><a href ="{{ post.url }}">{{ post.title }}</a></li>{% if forloop.last %}
+    </ol>
+    </li>{% endif %}{% endfor %}
   </ol>
-  </li>
-  <li><span>{{ year }}</span>
-  <ol>{% endif %}
-    <li><time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%b %d" }}</time><a href ="{{ post.url }}">{{ post.title }}</a></li>{% if forloop.last %}
-  </ol>
-  </li>{% endif %}{% endfor %}
-</ol>
+</article>
+<aside>
+  {% include 'search.html' %}
+  {% include 'categories.html' %}
+  {% include 'recent.html' %}
+</aside>
