@@ -1,0 +1,7 @@
+<nav id="recent">
+  <h1>Recent Articles</h1>
+  <ul>{% for post in site.posts limit:6 %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+    <li><a href="/archive"><i>More from Archive »</i></a></li>
+  </ul>
+</nav>

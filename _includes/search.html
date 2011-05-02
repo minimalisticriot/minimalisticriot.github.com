@@ -1,0 +1,7 @@
+<nav>
+  <form id="search" action="http://www.google.com/search" method="get">
+    <input id="q" type="text" name="q" placeholder="Site Search" autocomplete="off" role="search">
+    <input type="hidden" value="{{ site.url | remove_first:'http://' }}" name="sitesearch">
+    <button type="submit">Google</button>
+  </form>
+</nav>
