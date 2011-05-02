@@ -26,7 +26,7 @@
     {{ content }}
   </article>
   <aside>{% for m in page.modules %}{% capture module %}{{ m }}.html{% endcapture %}
-    {% include module %}{% endfor %}
+    {% include {{ module }} %}{% endfor %}
   </aside>
   <footer>
     <nav>
