@@ -1,5 +1,6 @@
 markdown: rdiscount
 pygments: true
+permalink: /:year/:month/:day/:title
 
 author: Riot M
 email: minimalisticriot@yahoo.com
