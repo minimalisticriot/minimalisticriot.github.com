@@ -3,7 +3,12 @@ layout: default
 ---
 
 <article>
-{{ content }}
+{{ content }}{% if page.categories %}
+<footer>
+  <p>Filed under{% for category in page.categories %}
+  <a href="/categories#{{ category }}">{{ category | replace:'_',' ' }}</a>{% endfor %}
+  </p>
+</footer>{% endif %}
 </article>
 <aside>
 {% include search.html %}{% include categories.html %}{% include recent.html %}</aside>
