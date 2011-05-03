@@ -42,6 +42,10 @@ pre {
   font: 1em/1.3 Ubuntu, "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, NSimSun, sans-serif;
 }
 
+ul, ol {
+  list-style: none outside none;
+}
+
 p {
   word-spacing: 0;
   letter-spacing: normal;
@@ -115,7 +119,6 @@ header .logo a:hover {
   font: 300 1.4118em/1.3 Ubuntu, sans-serif;
   padding: 0;
   margin: 0.625em 0;
-  list-style: none outside none;
 }
 
 #site-nav li {
@@ -208,6 +211,11 @@ body > aside > * {
   padding: .4706em;
 }
 
+body > aside > nav:first-child {
+  padding: 0;
+  border: none;
+}
+
 body > aside > * + * {
   margin-top: .7352em;
 }
@@ -221,10 +229,6 @@ body > aside > * > h1 {
 body > aside ol,
 body > aside ul {
   margin: 0;
-}
-
-body > aside ul {
-  list-style: none outside none;
 }
 
 body > aside ul li:before {
@@ -247,8 +251,8 @@ article section h1:first-letter {
   text-decoration: overline;
 }
 
+/* sidebar: tag cloud */
 #tag-cloud > ol {
-  list-style: none outside none;
   padding: 0;
   margin: 0;
   font: .9411em/1 Ubuntu, sans-serif;
@@ -290,11 +294,7 @@ article section h1:first-letter {
   font-size: .9em;
 }
 
-aside > nav:first-child {
-  padding: 0;
-  border: none;
-}
-
+/* sidebar: search */
 #search > form {
   margin: 0;
   padding: 0;
@@ -324,3 +324,26 @@ aside > nav:first-child {
   text-indent: -999em;
   float: right;
 }
+
+/* page: categories, archive */
+article.archive > section ol,
+article.categories > section ol {
+  margin: 0 2.5em 0 1em;
+}
+article.archive > section li > time,
+article.categories > section li > time {
+  float: right;
+}
+article.archive > section li:before,
+article.categories > section li:before {
+  content: "◈";
+  margin-right: .3em;
+}
+article.archive > section li:nth-child(2n),
+article.categories > section li:nth-child(2n) {
+  background: #e6e6a8;
+}
+article.categories > section h1:after {
+  content: " (" attr(data-count) ")";
+}
+
