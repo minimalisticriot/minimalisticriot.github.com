@@ -1,12 +1,12 @@
 /* For non-HTML5 browsers:
  * unknown elements are styled as display:inline by default */
+details, figcaption, figure, menu,
 section, article, aside, footer, header, nav, hgroup {
   display:block;
 }
 
 html {
   margin: 0;
-  background: #fff url(/images/windrotate.png) repeat scroll center top;
   color: #333;
   line-height: 1.3;
   text-align: start;
@@ -15,11 +15,13 @@ html {
 ::-moz-selection {
   color: #fff;
   background: #4682b4;
+  text-shadow: none;
 }
 
 ::selection {
   color: #fff;
   background: #4682b4;
+  text-shadow: none;
 }
 
 a {
@@ -58,7 +60,7 @@ footer p, header p {
   color: #666;
 }
 
-code, pre {
+code, pre, kbd, samp {
   font: .95em/1.25 Consolas, "Bitstream Vera Sans Mono", Inconsolata, "Courier New", monospace;
 }
 
@@ -225,13 +227,11 @@ body > aside {
 }
 
 body > aside > * {
-  border: 1px solid #eea;
   padding: .4706em;
 }
 
 body > aside > nav:first-child {
-  padding: 0;
-  border: none;
+  padding-top: 0;
 }
 
 body > aside > * + * {
@@ -239,7 +239,7 @@ body > aside > * + * {
 }
 
 body > aside > * > h1 {
-  margin: 0;
+  margin: 0 0 .2em;
   font: normal .9411em/1 Ubuntu, sans-serif;
   color: #777;
 }
@@ -255,8 +255,7 @@ body > aside ul li:before {
 
 body > footer {
   clear: left;
-  padding: .3676em 0 .7352em;
-  border-top: 1px solid #cccccc;
+  padding: .3676em 0;
   color: #333;
   text-align: center;
 }
@@ -313,6 +312,9 @@ article section h1:first-letter {
 }
 
 /* sidebar: search */
+#search {
+  padding: 0;
+}
 #search > form {
   margin: 0;
   padding: 0;
