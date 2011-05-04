@@ -2,7 +2,12 @@
 layout: default
 ---
 
-<article>
+<article{% if post.lang %} lang="{{ page.lang }}"{% endif %}>
+  <header>
+    <h1>page.title</h1>{% if page.published %}
+    <p>Published: <time pubdate datetime="{{ page.published }}">{{ page.published | date:"%A, %B %d, %Y" }}</time></p>{% endif %}{% if page.modified %}
+    <p>Last modified: <time datetime="{{ page.modified }}">{{ page.modified | date:"%A, %B %d, %Y" }}</time></p>{% endif %}
+  </header>
 {{ content }}
 <footer>{% if page.tags %}
   <p class="tags">{% for tag in page.tags %}
