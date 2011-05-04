@@ -3,12 +3,16 @@ layout: default
 ---
 
 <article>
-{{ content }}{% if page.categories %}
-<footer>
-  <p>Filed under{% for category in page.categories %}
-  <a href="/categories#{{ category }}">{{ category | replace:'_',' ' }}</a>{% endfor %}
+{{ content }}
+<footer>{% if page.tags %}
+  <p class="tags">{% for tag in page.tags %}
+  <a href="/tags#{{ tag }}">{{ tag | replace:'_',' ' }}</a>{% endfor %}
+  </p>{% endif %}
+  <p>{% if page.previous %}
+  <a class="prev" href="{{ page.previous }}">prev</a>{% endif %}{% if page.next %}
+  <a class="next" href="{{ page.next }}">next</a>{% endif %}
   </p>
-</footer>{% endif %}
+</footer>
 </article>
 <aside>
-{% include search.html %}{% include categories.html %}{% include recent.html %}</aside>
+{% include search.html %}{% include tags.html %}{% include recent.html %}</aside>

@@ -6,7 +6,7 @@ section, article, aside, footer, header, nav, hgroup {
 
 html {
   margin: 0;
-  background: #fff;
+  background: #fff url(/images/windrotate.png) repeat scroll center top;
   color: #333;
   line-height: 1.3;
   text-align: start;
@@ -24,7 +24,7 @@ html {
 
 a {
   text-decoration: none;
-  color: #5f9ea0
+  color: #4682b4;
 }
 
 a:hover {
@@ -76,11 +76,11 @@ figcaption {
 }
 
 body {
+  background: #fff;
   position: relative;
   width: 56.47em;
   margin: .7353em auto;
   padding: 0 .7353em;
-  box-shadow: .3em .3em .25em #bbb, -2px -2px 2px #eee;
   font-family: "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, NSimSun, "Microsoft YaHei", sans-serif;
   font-size: 13.6px;
 }
@@ -162,7 +162,7 @@ body > article {
 }
 
 body > article > header {
-  border-bottom: 1px solid #e4e488;
+  border-bottom: 1px solid #eea;
   margin-bottom: 1.1765em;
 }
 
@@ -197,17 +197,38 @@ img.right {
 }
 
 body > article > footer {
-  text-align: right;
+  position: relative;
+}
+body > article > footer .tags {
+  margin: 0 4em;
+  text-align: center;
+}
+body > article > footer .prev {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+body > article > footer .prev:before {
+  content: "« ";
+}
+body > article > footer .next {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+body > article > footer .next:after {
+  content: " »";
 }
 
 body > aside {
   foat: left;
   overflow: hidden;
   padding: 0 .3676em;
+  margin-bottom: .7352em;
 }
 
 body > aside > * {
-  border: 1px dashed purple;
+  border: 1px solid #eea;
   padding: .4706em;
 }
 
@@ -325,20 +346,24 @@ article section h1:first-letter {
   float: right;
 }
 
-/* page: categories, archive */
+/* page: archive, categories, tags */
+article.tags > section ol,
 article.archive > section ol,
 article.categories > section ol {
   margin: 0 2.5em 0 1em;
 }
+article.tags > section li > time,
 article.archive > section li > time,
 article.categories > section li > time {
   float: right;
 }
+article.tags > section li:before,
 article.archive > section li:before,
 article.categories > section li:before {
   content: "◈";
   margin-right: .3em;
 }
+article.tags > section li:nth-child(2n),
 article.archive > section li:nth-child(2n),
 article.categories > section li:nth-child(2n) {
   background: #e6e6a8;

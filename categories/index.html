@@ -8,23 +8,11 @@ title: Categories
     <h1>{{ page.title }}</h1>
   </header>
   <section>
-    <h1 id="CSS3" data-count="{{ site.categories.CSS3 | size }}">CSS3</h1>
-    <ol>{% for post in site.categories.CSS3 %}
-        <li><time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
-    </ol>
-  </section>
-  <section>
-    <h1 id="HTML5" data-count="{{ site.categories.HTML5 | size }}">HTML5</h1>
-    <ol>{% for post in site.categories.HTML5 %}
-        <li><time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
-    </ol>
-  </section>
-  <section>
-    <h1 id="VIM" data-count="{{ site.categories.VIM | size }}">VIM</h1>
-    <ol>{% for post in site.categories.VIM %}
+    <h1 id="web" data-count="{{ site.categories.web | size }}">web</h1>
+    <ol>{% for post in site.categories.web %}
         <li><time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
     </ol>
   </section>
 </article>
 <aside>
-{% include search.html %}{% include categories.html %}{% include recent.html %}</aside>
+{% include search.html %}{% include tags.html %}{% include recent.html %}</aside>
