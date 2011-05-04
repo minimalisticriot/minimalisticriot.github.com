@@ -106,7 +106,7 @@ header .logo a {
 }
 
 header .logo a:hover {
-  color: #2e8b57;
+  color: #689;
   text-decoration: none;
 }
 
@@ -142,14 +142,11 @@ header .logo a:hover {
 }
 
 #site-nav li a.selected {
-  color: #2e8b57;
-  border-top: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
-  background: #f9f9f9;
+  color: #7ca255;
 }
 
 #site-nav li a.selected:hover {
-  color: #8fbc8f;
+  color: #8fbc66;
 }
 
 body > article {
@@ -265,7 +262,7 @@ body > footer {
 }
 
 body > footer a {
-  color: #2e8b57;
+  color: #7ca255;
 }
 
 article section h1:first-letter {
@@ -329,13 +326,14 @@ article section h1:first-letter {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
-  border: 1px inset #f7f5f2;
+  border: 1px solid #eea;
   background: #fff;
   color: #bbb;
 
 }
 #q:focus {
   color: #666;
+  background: #ffffbb;
 }
 #search button {
   border: 1px outset #f7f5f2;
@@ -350,7 +348,7 @@ article section h1:first-letter {
 article.tags > section ol,
 article.archive > section ol,
 article.categories > section ol {
-  margin: 0 2.5em 0 1em;
+  margin: 0 1em;
 }
 article.tags > section li > time,
 article.archive > section li > time,
@@ -366,7 +364,7 @@ article.categories > section li:before {
 article.tags > section li:nth-child(2n),
 article.archive > section li:nth-child(2n),
 article.categories > section li:nth-child(2n) {
-  background: #e6e6a8;
+  background: #f7f7b5;
 }
 article.categories > section h1:after {
   content: " (" attr(data-count) ")";
