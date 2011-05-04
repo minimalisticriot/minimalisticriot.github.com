@@ -345,28 +345,22 @@ article section h1:first-letter {
 }
 
 /* page: archive, categories, tags */
-article.tags > section ol,
-article.archive > section ol,
-article.categories > section ol {
+article.listing > section ol{
   margin: 0 1em;
 }
-article.tags > section li > time,
-article.archive > section li > time,
-article.categories > section li > time {
+article.listing > section li > time {
   float: right;
 }
-article.tags > section li:before,
-article.archive > section li:before,
-article.categories > section li:before {
+article.listing > section li:before {
   content: "◈";
   margin-right: .3em;
 }
-article.tags > section li:nth-child(2n),
-article.archive > section li:nth-child(2n),
-article.categories > section li:nth-child(2n) {
+article.listing > section li:nth-child(2n) {
   background: #f7f7b5;
+}
+article.listing > section li {
+  line-height: 1.8;
 }
 article.categories > section h1:after {
   content: " (" attr(data-count) ")";
 }
-
