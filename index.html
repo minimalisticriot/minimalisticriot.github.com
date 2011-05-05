@@ -1,7 +1,21 @@
 ---
-layout: post
+layout: default
 title: Home
 ---
 
 {% for post in site.posts limit:1 %}
-{{ post.content }}{% endfor %}
+<article{% if post.lang %} lang="{{ post.lang }}"{% endif %}>
+  <header>
+    <h1>{{ post.title }}</h1>{% if post.published %}
+    <p>Published: <time pubdate datetime="{{ post.published }}">{{ post.published | date:"%A, %B %d, %Y" }}</time></p>{% endif %}{% if post.modified %}
+    <p>Last modified: <time datetime="{{ post.modified }}">{{ post.modified | date:"%A, %B %d, %Y" }}</time></p>{% endif %}
+  </header>
+{{ post.content }}
+<footer>{% if post.tags %}
+  <p class="tags">{% for tag in post.tags %}
+  <a href="/tags#{{ tag }}">{{ tag | replace:'_',' ' }}</a>{% endfor %}
+  </p>{% endif %}
+</footer>{% endfor %}
+</article>
+<aside>
+{% include search.html %}{% include tags.html %}{% include recent.html %}</aside>
