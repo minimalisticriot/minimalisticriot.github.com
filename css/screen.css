@@ -33,6 +33,8 @@ a:hover {
   text-decoration: underline;
 }
 
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
 blockquote,
 dl,
 ol,

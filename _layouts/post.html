@@ -9,10 +9,10 @@ layout: default
     <p>Last modified: <time datetime="{{ page.modified }}">{{ page.modified | date:"%A, %B %d, %Y" }}</time></p>{% endif %}
   </header>
 {{ content }}
-<footer>{% capture n %}{{ page.tags | size }}{% endcapture %}{% if n != 0 %}
+<footer>
   <p class="tags">{% for tag in page.tags %}
   <a href="/tags#{{ tag }}">{{ tag | replace:'_',' ' }}</a>{% endfor %}
-  </p>{% endif %}
+  </p>
   <p>{% if page.previous %}
   <a class="prev" href="{{ page.previous.url }}">prev</a>{% endif %}{% if page.next %}
   <a class="next" href="{{ page.next.url }}">next</a>{% endif %}

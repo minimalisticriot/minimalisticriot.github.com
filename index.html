@@ -11,10 +11,10 @@ title: Home
     <p>Last modified: <time datetime="{{ post.modified }}">{{ post.modified | date:"%A, %B %d, %Y" }}</time></p>{% endif %}
   </header>
 {{ post.content }}
-<footer>{% capture n %}{{ post.tags | size }}{% endcapture %}{% if n != 0 %}
+<footer>
   <p class="tags">{% for tag in post.tags %}
   <a href="/tags#{{ tag }}">{{ tag | replace:'_',' ' }}</a>{% endfor %}
-  </p>{% endif %}
+  </p>
   <p>{% if post.previous %}
   <a class="prev" href="{{ post.previous.url }}">prev</a>{% endif %}{% if post.next %}
   <a class="next" href="{{ post.next.url }}">next</a>{% endif %}
