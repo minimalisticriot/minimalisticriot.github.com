@@ -182,7 +182,7 @@ article > section > h1 {
 }
 
 body > article img {
-  max-width: 38.8235em;
+  max-width: 100%;
 }
 
 img.left {
